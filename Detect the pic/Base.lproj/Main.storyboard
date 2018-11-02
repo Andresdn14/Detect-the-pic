@@ -1,24 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3RI-E0-Bmx">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Navigation Controller-->
+        <scene sceneID="CnT-aL-3lW">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <navigationController id="3RI-E0-Bmx" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WEN-8H-b0a">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="iJp-to-MMn" kind="relationship" relationship="rootViewController" id="Ai1-i8-8dy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6qN-jr-1zK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-664" y="86"/>
+        </scene>
+        <!--Detect the pic-->
+        <scene sceneID="0QU-aT-fuj">
+            <objects>
+                <viewController id="iJp-to-MMn" customClass="ViewController" customModule="Detect_the_pic" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sH2-rS-Bcu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo-camera" translatesAutoresizingMaskIntoConstraints="NO" id="plb-uZ-wgV">
+                                <rect key="frame" x="0.0" y="64" width="375" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="0Py-dJ-6pf"/>
+                                </constraints>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PWS-gA-PEc">
+                                <rect key="frame" x="0.0" y="314" width="375" height="353"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PWS-gA-PEc" firstAttribute="top" secondItem="plb-uZ-wgV" secondAttribute="bottom" id="7et-WA-YA6"/>
+                            <constraint firstItem="PWS-gA-PEc" firstAttribute="leading" secondItem="vL0-nb-aTP" secondAttribute="leading" id="Dj8-Jl-TT5"/>
+                            <constraint firstItem="vL0-nb-aTP" firstAttribute="trailing" secondItem="PWS-gA-PEc" secondAttribute="trailing" id="U0g-5D-wtf"/>
+                            <constraint firstItem="plb-uZ-wgV" firstAttribute="trailing" secondItem="vL0-nb-aTP" secondAttribute="trailing" id="U1t-As-W5v"/>
+                            <constraint firstItem="vL0-nb-aTP" firstAttribute="bottom" secondItem="PWS-gA-PEc" secondAttribute="bottom" id="aLe-UO-3ie"/>
+                            <constraint firstItem="plb-uZ-wgV" firstAttribute="leading" secondItem="vL0-nb-aTP" secondAttribute="leading" id="hai-Jm-mfR"/>
+                            <constraint firstItem="plb-uZ-wgV" firstAttribute="top" secondItem="vL0-nb-aTP" secondAttribute="top" id="paL-o9-0B8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vL0-nb-aTP"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Detect the pic" id="ym0-gK-hVc">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="camera" id="OEg-Nh-hdH">
+                                <connections>
+                                    <action selector="cameraTapped:" destination="iJp-to-MMn" id="uHy-Er-Kh4"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="organize" id="PFd-Sk-IbC">
+                                <connections>
+                                    <action selector="folderTapped:" destination="iJp-to-MMn" id="t3P-c5-MeK"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="plb-uZ-wgV" id="4wK-Hq-ukN"/>
+                        <outlet property="tableView" destination="PWS-gA-PEc" id="bqG-bK-YJb"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JGW-nf-LF2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="141.59999999999999" y="85.907046476761622"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="photo-camera" width="409.60000610351562" height="409.60000610351562"/>
+    </resources>
 </document>

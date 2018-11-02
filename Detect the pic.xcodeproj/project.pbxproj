@@ -8,22 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		04B29E08217CFCE300479366 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B29E07217CFCE300479366 /* AppDelegate.swift */; };
-		04B29E0A217CFCE300479366 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B29E09217CFCE300479366 /* ViewController.swift */; };
 		04B29E0D217CFCE300479366 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04B29E0B217CFCE300479366 /* Main.storyboard */; };
 		04B29E10217CFCE300479366 /* Detect_the_pic.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04B29E0E217CFCE300479366 /* Detect_the_pic.xcdatamodeld */; };
 		04B29E12217CFCE400479366 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04B29E11217CFCE400479366 /* Assets.xcassets */; };
 		04B29E15217CFCE400479366 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04B29E13217CFCE400479366 /* LaunchScreen.storyboard */; };
+		04B29E1D217D02D200479366 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B29E1C217D02D200479366 /* ViewController.swift */; };
+		04B29E1F217D07A700479366 /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 04B29E1E217D07A700479366 /* Resnet50.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		04B29E04217CFCE300479366 /* Detect the pic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Detect the pic.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04B29E07217CFCE300479366 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		04B29E09217CFCE300479366 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		04B29E0C217CFCE300479366 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04B29E0F217CFCE300479366 /* Detect_the_pic.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Detect_the_pic.xcdatamodel; sourceTree = "<group>"; };
 		04B29E11217CFCE400479366 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04B29E14217CFCE400479366 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04B29E16217CFCE400479366 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04B29E1C217D02D200479366 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		04B29E1E217D07A700479366 /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Resnet50.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,12 +59,13 @@
 			isa = PBXGroup;
 			children = (
 				04B29E07217CFCE300479366 /* AppDelegate.swift */,
-				04B29E09217CFCE300479366 /* ViewController.swift */,
 				04B29E0B217CFCE300479366 /* Main.storyboard */,
+				04B29E1C217D02D200479366 /* ViewController.swift */,
 				04B29E11217CFCE400479366 /* Assets.xcassets */,
 				04B29E13217CFCE400479366 /* LaunchScreen.storyboard */,
 				04B29E16217CFCE400479366 /* Info.plist */,
 				04B29E0E217CFCE300479366 /* Detect_the_pic.xcdatamodeld */,
+				04B29E1E217D07A700479366 /* Resnet50.mlmodel */,
 			);
 			path = "Detect the pic";
 			sourceTree = "<group>";
@@ -138,8 +141,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04B29E0A217CFCE300479366 /* ViewController.swift in Sources */,
+				04B29E1D217D02D200479366 /* ViewController.swift in Sources */,
 				04B29E08217CFCE300479366 /* AppDelegate.swift in Sources */,
+				04B29E1F217D07A700479366 /* Resnet50.mlmodel in Sources */,
 				04B29E10217CFCE300479366 /* Detect_the_pic.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
