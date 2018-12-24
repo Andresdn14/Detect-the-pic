@@ -22,7 +22,7 @@ class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSourc
         let result = results[indexPath.row]
         
         let name = result.identifier.prefix(30)
-        cell.textLabel?.text = "\(name): \(Int(result.confidence * 100))%"
+        cell.textLabel?.text = "\(name): \(Int(result.confidence * 100))%!"
         return cell
     }
     
